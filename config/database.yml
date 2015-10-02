@@ -1,0 +1,47 @@
+# PostgreSQL. Versions 8.2 and up are supported.
+#
+# Install the pg driver:
+#   gem install pg
+# On OS X with Homebrew:
+#   gem install pg -- --with-pg-config=/usr/local/bin/pg_config
+# On OS X with MacPorts:
+#   gem install pg -- --with-pg-config=/opt/local/lib/postgresql84/bin/pg_config
+# On Windows:
+#   gem install pg
+#       Choose the win32 build.
+#       Install PostgreSQL and put its /bin directory on your path.
+#
+# Configure Using Gemfile
+# gem 'pg'
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch('DATABASE_CONNECTION_POOL', 5) %>
+<% if ENV['DATABASE_HOST'] %>
+  host: <%= ENV['DATABASE_HOST'] %>
+<% end %>
+<% if ENV['DATABASE_PORT'] %>
+  port: <%= ENV['DATABASE_PORT'].to_i %>
+<% end %>
+<% if ENV['DATABASE_USER'] %>
+  username: '<%= ENV['DATABASE_USER'] %>'
+<% end %>
+<% if ENV['DATABASE_PASSWORD'] %>
+  password: '<%= ENV['DATABASE_PASSWORD'] %>'
+<% end %>
+
+development:
+  <<: *default
+  database: <%= ENV.fetch('DATABASE_DB') %>_development
+
+test: &test
+  <<: *default
+  database: <%= ENV.fetch('DATABASE_DB') %>_test
+
+cucumber:
+  <<: *test
+
+production:
+  <<: *default
+  database: <%= ENV.fetch('DATABASE_DB') %>
