@@ -16,7 +16,7 @@
     gem install bundler
 
 ### .env
-rename .env.example to .env
+rename `.env.example` to `.env`
 
     mv .env.example .env
 
@@ -35,7 +35,6 @@ rename .env.example to .env
 
 
 # OR create rails app
-
     gem install rails
     gem install pg
     rails new rails_template_app -T --database=postgresql
