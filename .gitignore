@@ -6,8 +6,11 @@
 !/log/.keep
 /tmp
 
-## RubyMine
+# Ignore Coverage
+/coverage
+
+# RubyMine
 .idea/*
 
-## Environment configuration
+# Environment configuration
 .env
