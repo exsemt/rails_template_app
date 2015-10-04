@@ -4,6 +4,19 @@ This is a simple Ruby on Rails application example with Postgres, foreman, boots
 - rails 4.2.4
 - ruby 2.2.3
 
+### required gems
+- pg
+- foreman
+- bootstrap-sass
+- dotenv-rails
+- slim-rails
+- rubocop
+
+#### todo: add more gems
+- simple_form
+- devise
+- capistrano
+
 ## Start DB and rails server with foreman
 Foreman can help manage multiple processes that your Rails app depends upon when running in development. E.g. to start Postgers and rails server.
 
