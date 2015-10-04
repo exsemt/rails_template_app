@@ -1,11 +1,13 @@
 # Rails template app
+This is a simple Ruby on Rails application example with Postgres, foreman, bootstrap-sass, simple_form, devise and capistrano. 
+
 - rails 4.2.4
 - ruby 2.2.3
 
 
 ## Installation and first steps
 
-### postgres
+### Installing Postgres on OS X
     brew install postgres
 
 ### Clone application
