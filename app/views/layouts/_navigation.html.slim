@@ -1,0 +1,36 @@
+nav.navbar.navbar-default.navbar-inverse
+  .container
+    /! Brand and toggle get grouped for better mobile display
+    .navbar-header
+      button.navbar-toggle.collapsed data-target='#bs-example-navbar-collapse-1' data-toggle='collapse' type='button'
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.navbar-brand href='/' Rails template app
+
+    #bs-example-navbar-collapse-1.collapse.navbar-collapse
+      ul.nav.navbar-nav
+        /li class: "#{'active' if current_controller?('profile')}"
+        /  = link_to 'Profil', profile_index_path
+        li
+          a href='#' Link
+
+      form.navbar-form.navbar-right
+        .form-group
+          input.form-control placeholder='Email' type='text' /
+        .form-group
+          input.form-control placeholder='Password' type='password' /
+        button.btn.btn-success type='submit'= t('.sign_in')
+      /ul.nav.navbar-nav.navbar-right
+      /  - if user_signed_in?
+      /    li
+      /      = link_to edit_user_registration_path, title: 'Profildaten ändern', class: 'tip' do
+      /        = current_user.salute_name
+      /        i.fa.fa-user
+      /    li
+      /      = link_to 'Logout', destroy_user_session_path, method: :delete
+      /  - else
+      /    li
+      /      = link_to 'Login', new_user_session_path
+

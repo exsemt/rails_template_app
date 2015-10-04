@@ -1,0 +1,9 @@
+- flash[:danger] = flash[:error] if flash[:error].present?
+- flash[:info] = flash[:notice] if flash[:notice].present?
+
+- flash.each do |key, value|
+  - if [:success, :info, :warning, :danger].include?(key.to_sym)
+    .alert.alert-dismissible class="alert-#{key}"
+      button.close type='button' data-dismiss='alert' aria-hidden='true'
+        | &times;
+      = raw value

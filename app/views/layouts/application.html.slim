@@ -10,6 +10,8 @@ html
     /  alert('Slim supports embedded javascript!');
 
   body
-    h1 Markup examples
-
-    == yield
+    == render 'layouts/navigation'
+    .container
+      == render 'layouts/flash'
+      == yield
+      == render 'layouts/footer'
