@@ -4,8 +4,13 @@ This is a simple Ruby on Rails application example with Postgres, foreman, boots
 - rails 4.2.4
 - ruby 2.2.3
 
+## Start DB and rails server with foreman
+Foreman can help manage multiple processes that your Rails app depends upon when running in development. E.g. to start Postgers and rails server.
+
+    foreman start
 
 ## Installation and first steps
+Hire is simple description for a first step to install DB, clone repo and start rails server.
 
 ### Installing Postgres on OS X
     brew install postgres
@@ -22,10 +27,12 @@ rename `.env.example` to `.env`
 
     mv .env.example .env
 
-### Start foreman
+### Start DB and rails server with foreman
     foreman start
 
 ### Create database
+open new tab and create DB
+
     rake db:create
 
 ### Create database tables
