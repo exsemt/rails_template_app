@@ -15,6 +15,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
+gem 'rails-i18n'
 
 # gem 'carrierwave'
 # gem 'carrierwave_backgrounder'
