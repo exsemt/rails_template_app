@@ -14,7 +14,7 @@ This is a simple Ruby on Rails application example with Postgres, foreman, boots
 
 #### todo: add more gems
 - simple_form
-- devise
+- sorcery or devise
 - capistrano
 
 ## Start DB and rails server with foreman
