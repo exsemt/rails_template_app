@@ -16,6 +16,10 @@ gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 gem 'rails-i18n'
 
+gem 'simple_form'
+# gem 'kaminari'
+# gem 'rails_admin'
+# gem 'devise'
 # gem 'carrierwave'
 # gem 'carrierwave_backgrounder'
 # gem 'mini_magick'
@@ -23,14 +27,7 @@ gem 'rails-i18n'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.0'
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
 # gem 'newrelic_rpm'
-# gem 'kaminari'
-# gem 'rails_admin'
-# gem 'devise'
-# gem 'simple_form'
 
 group :development do
   gem 'foreman'
