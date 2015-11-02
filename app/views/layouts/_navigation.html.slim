@@ -16,21 +16,21 @@ nav.navbar.navbar-default.navbar-inverse
         li
           a href='#' Link
 
-      form.navbar-form.navbar-right
-        .form-group
-          input.form-control placeholder='Email' type='text' /
-        .form-group
-          input.form-control placeholder='Password' type='password' /
-        button.btn.btn-success type='submit'= t('.sign_in')
-      /ul.nav.navbar-nav.navbar-right
-      /  - if user_signed_in?
-      /    li
-      /      = link_to edit_user_registration_path, title: 'Profildaten ändern', class: 'tip' do
-      /        = current_user.salute_name
-      /        i.fa.fa-user
-      /    li
-      /      = link_to 'Logout', destroy_user_session_path, method: :delete
-      /  - else
-      /    li
-      /      = link_to 'Login', new_user_session_path
-
+      /form.navbar-form.navbar-right
+      /  .form-group
+      /    input.form-control placeholder='Email' type='text' /
+      /  .form-group
+      /    input.form-control placeholder='Password' type='password' /
+      /  button.btn.btn-success type='submit'= t('.sign_in')
+      ul.nav.navbar-nav.navbar-right
+        - if user_signed_in?
+          li
+            = link_to edit_user_registration_path, title: t('.edit_profile'), class: 'tip' do
+              i.fa.fa-user
+              | &nbsp;
+              = current_user.name
+          li
+            = link_to t('.sign_out'), destroy_user_session_path, method: :delete
+        - else
+          li
+            = link_to t('.sign_in'), new_user_session_path

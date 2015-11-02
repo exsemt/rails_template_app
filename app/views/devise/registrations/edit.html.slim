@@ -1,0 +1,45 @@
+.page-header
+  h1= t('.edit_profile')
+
+.row
+  .col-md-10
+    = simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, class: 'form-horizontal' }) do |f|
+      .form-inputs
+        = f.error_notification
+        = f.input :salutation, as: :select, collection: User::SALUTATION.map { |s| [t('fixed.salutations')[s], s] }, include_blank: true
+        = f.input :name
+        = f.input :phone_number
+        = f.input :email
+        = f.input :current_password, autocomplete: "off", required: true
+        = f.input :password, autocomplete: "off", placeholder: t('.minimum_length'), label: t('.new_password')
+        = f.input :password_confirmation, autocomplete: "off", placeholder: t('.minimum_length'), label: t('.new_password_confirm')
+
+      .col-sm-offset-2.col-sm-10
+        = button_tag type: 'submit', class: 'btn btn-primary btn-lg' do
+          i.fa.fa-arrow-right>
+          = t('.edit')
+        br
+        br
+        br
+        a[data-toggle="modal" data-target="#delete_user"]
+          i.fa.fa-chevron-right>
+          = t('.delete_profile')
+
+#delete_user.modal.fade[tabindex="-1" role="dialog" aria-labelledby="delete_user_modal_label" aria-hidden="true"]
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close[type="button" data-dismiss="modal"]
+          span[aria-hidden="true"]
+            | ×
+          span.sr-only
+            = t('fixed.close')
+        h4#catalog-info-label.modal-title
+          = t('.delete_profile')
+      .modal-body
+        .lead
+          p= t('.are_you_sure')
+      .modal-footer
+        = link_to t('fixed.yes'), registration_path(resource_name), method: :delete,  class: "btn btn-danger"
+        button.btn.btn-default[type="button" data-dismiss="modal"]
+          = t('fixed.no')

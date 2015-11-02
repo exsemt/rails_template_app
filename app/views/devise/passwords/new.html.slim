@@ -1,0 +1,23 @@
+.page-header
+  h1= t('.forgot_password')
+
+.col-md-offset-2
+  h3= t('.info_title')
+  ol
+    li= t('.type_your_email')
+    li= t('.click_on_button')
+    li= t('.password_email_info')
+.row
+  .col-md-10
+    = simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post, class: 'form-horizontal' }) do |f|
+      .form-inputs
+        = f.error_notification
+        = f.input :email, autofocus: true, required: true
+      .form-group
+        .col-sm-offset-2.col-sm-10
+          .clearfix[style="margin: 0 0 20px 0"]
+            = button_tag type: 'submit', class: 'btn btn-primary btn-lg' do
+              i.fa.fa-arrow-right>
+              = t('.reset_password')
+          p
+            = render "devise/shared/links"

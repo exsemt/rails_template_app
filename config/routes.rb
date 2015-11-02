@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
-  root 'root#index'
+  devise_for :users
+  # devise_for :users, path_names: { sign_in: 'login', sign_out: 'logout', registration: 'register', password: 'secret' }
+  # get 'users/sign_in', to: redirect('users/login')
+  # devise_scope :user do
+  #   get 'register/geloescht', as: 'user_deleted_successfully', to: 'devise/registrations#deleted_successfully'
+  # end
 
+  root 'root#index'
   resources 'root', only: :index
 
   # Example of regular route:

@@ -1,0 +1,61 @@
+en:
+  fixed:
+    yes: Yes
+    no: No
+    close: Close
+    salutations:
+      mr: Mr.
+      mrs: Mrs.
+      company: Company
+
+  layouts:
+    navigation:
+      edit_profile: Edit Profile
+      sign_in: Login
+      sign_out: Logout
+
+  devise:
+    mailer:
+      reset_password_instructions:
+        hello: Hello
+        reset_password_info: Someone has requested a link to change your password. You can do this through the link below.
+        change_my_password: Change my password
+        ignore_this_email: If you didn't request this, please ignore this email.
+        info_change_password: "Your password won't change until you access the link above and create a new one."
+    passwords:
+      edit:
+        change_password: Change password
+      new:
+        forgot_password: Forgot password?
+        reset_password: Reset password
+        info_title: "Here's how you can reset your password:"
+        type_your_email: Type your email address into the field.
+        click_on_button: Click on „Reset Password“.
+        password_email_info: Within minutes you will receive an email with instructions to reset your password.
+    registrations:
+      deleted_successfully:
+        delete_profile: Delete profile
+        info: Your profile has been deleted from our website. You can create a new user profile at any time.
+        back_to_start_page: Back to start page
+      edit:
+        edit_profile: Edit profile
+        minimum_length: 'Minimum Length: 8 characters'
+        new_password: New password
+        new_password_confirm: New passwort confirm
+        edit: Edit
+        delete_profile: Delete profile
+        are_you_sure: Are you sure?
+      new:
+        register: Create new account
+        minimum_length: 'Minimum Length: 8 characters'
+    sessions:
+      new:
+        sign_in: Login
+    shared:
+      links:
+        sign_in: Login
+        register: Create new account
+        forgot_password: Forgot password?
+        did_not_receive_confirmation: Didn't receive confirmation instructions?
+        did_not_receive_unlock: Didn't receive unlock instructions?
+        sign_in_with: Sign in with %{provider}

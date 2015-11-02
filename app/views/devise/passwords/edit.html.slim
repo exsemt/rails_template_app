@@ -1,0 +1,19 @@
+.page-header
+  h1= t('.change_password')
+
+.row
+  .col-md-10
+    = simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put, class: 'form-horizontal' }) do |f|
+      .form-inputs
+        = f.error_notification
+        = f.hidden_field :reset_password_token
+        = f.input :password, autofocus: true, autocomplete: "off"
+        = f.input :password_confirmation, autofocus: true, autocomplete: "off"
+      .col-sm-offset-2.col-sm-10
+        = button_tag type: 'submit', class: 'btn btn-primary btn-lg' do
+          i.fa.fa-arrow-right>
+          = t('.change_password')
+        br
+        br
+        br
+        = render "devise/shared/links"

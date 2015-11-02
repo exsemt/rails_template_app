@@ -1,4 +1,61 @@
 de:
+  fixed:
+    yes: Yes
+    no: No
+    close: Close
+    salutations:
+      mr: Mr.
+      mrs: Mrs.
+      company: Company
+
   layouts:
     navigation:
-      sign_in: 'Login'
+      edit_profile: Profildaten ändern
+      sign_in: Login
+      sign_out: Logout
+
+  devise:
+    mailer:
+      reset_password_instructions:
+        hello: Hallo
+        reset_password_info: Someone has requested a link to change your password. You can do this through the link below.
+        change_my_password: Change my password
+        ignore_this_email: If you didn't request this, please ignore this email.
+        info_change_password: "Your password won't change until you access the link above and create a new one."
+    passwords:
+      edit:
+        change_password: Passwort ändern
+      new:
+        forgot_password: Passwort vergessen?
+        reset_password: Passwort zurücksetzen
+        info_title: 'So einfach setzen Sie Ihr Passwort zurück:'
+        type_your_email: Tragen Sie Ihre E-Mail-Adresse in das Feld ein.
+        click_on_button: Klicken Sie auf die Schaltfläche „Passwort zurücksetzen“.
+        password_email_info: Sie erhalten innerhalb weniger Minuten eine E-Mail mit der Anleitung zum Zurücksetzen Ihres Passwortes.
+    registrations:
+      deleted_successfully:
+        delete_profile: Profil gelöscht
+        info: Ihr Profil wurde auf unserer Webseite gelöscht. Sie können sich jederzeit ein neues Nutzerprofil anlegen.
+        back_to_start_page: Zurück zur Startseite
+      edit:
+        edit_profile: Profildaten ändern
+        minimum_length: 'Mindestlänge: 8 Zeichen'
+        new_password: Neues Passwort
+        new_password_confirm: Neues Passwort wiederholen
+        edit: Edit
+        delete_profile: Profil löschen
+        are_you_sure: Sind Sie sicher?
+      new:
+        register: Create new account
+        minimum_length: 'Mindestlänge: 8 Zeichen'
+    sessions:
+      new:
+        sign_in: Login
+    shared:
+      links:
+        sign_in: Login
+        register: Registrieren
+        forgot_password: Passwort vergessen?
+        did_not_receive_confirmation: Didn't receive confirmation instructions?
+        did_not_receive_unlock: Didn't receive unlock instructions?
+        sign_in_with: Sign in with %{provider}

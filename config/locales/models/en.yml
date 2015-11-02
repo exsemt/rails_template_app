@@ -1,0 +1,17 @@
+en:
+  activerecord:
+    models:
+      user: User
+
+    attributes:
+      user:
+        salutation: Salutation
+        name: Name
+        date_of_birth: Birthday
+        phone_number: Phone number
+        role: Role
+        email: Email
+        password: Password
+        password_confirmation: Passwort confirmation
+        current_password: current passwort
+        remember_me: Remember me
