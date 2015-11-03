@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+
   devise_for :users
   # devise_for :users, path_names: { sign_in: 'login', sign_out: 'logout', registration: 'register', password: 'secret' }
   # get 'users/sign_in', to: redirect('users/login')

@@ -18,11 +18,11 @@ gem 'rails-i18n'
 
 gem 'simple_form'
 # gem 'kaminari'
-# gem 'rails_admin'
 # gem 'carrierwave'
 # gem 'carrierwave_backgrounder'
 # gem 'mini_magick'
 gem 'devise'
+gem 'rails_admin'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.0'
