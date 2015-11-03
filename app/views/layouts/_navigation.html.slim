@@ -11,8 +11,8 @@ nav.navbar.navbar-default.navbar-inverse
 
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
       ul.nav.navbar-nav
-        /li class: "#{'active' if current_controller?('profile')}"
-        /  = link_to 'Profil', profile_index_path
+        li class="#{'active' if current_page?(root_path)}"
+          = link_to 'Home', root_path
         li
           a href='#' Link
 
