@@ -4,7 +4,7 @@ AllCops:
   RunRailsCops: true
   Exclude:
     - bin/**/*
-    - db/schema.rb
+    - db/**/*
     - tmp/**/*
 
 Documentation:

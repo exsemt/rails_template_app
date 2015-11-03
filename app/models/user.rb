@@ -8,5 +8,4 @@ class User < ActiveRecord::Base
   enum role: { customer: 0, admin: 1, guest: 2 }
 
   validates :salutation, :name, presence: true
-
 end
