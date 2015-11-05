@@ -23,11 +23,10 @@ gem 'simple_form'
 # gem 'mini_magick'
 gem 'devise'
 gem 'rails_admin'
+gem 'newrelic_rpm'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.0'
-
-# gem 'newrelic_rpm'
 
 group :development do
   gem 'foreman'
@@ -39,7 +38,6 @@ end
 
 group :development, :test do
   gem 'factory_girl_rails'
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'rspec-rails'
   gem 'database_cleaner'
