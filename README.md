@@ -11,10 +11,12 @@ This is a simple Ruby on Rails application example with Postgres, foreman, boots
 - dotenv-rails
 - slim-rails
 - rubocop
+- simple_form
+- devise
+- rails_admin
+- newrelic_rpm
 
 #### todo: add more gems
-- simple_form
-- sorcery or devise
 - capistrano
 
 ## Start DB and rails server with foreman
@@ -36,15 +38,15 @@ Hire is simple description for a first step to install DB, clone repo and start 
     gem install bundler
 
 ### .env
-rename `.env.example` to `.env`
+copy `.env.example` to `.env`
 
-    mv .env.example .env
+    cp .env.example .env
 
 ### Start DB and rails server with foreman
     foreman start
 
 ### Create database
-open new tab and create DB
+open new tab in terminal and create DB
 
     rake db:create
 
