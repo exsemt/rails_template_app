@@ -1,6 +1,7 @@
+# frozen_string_literal: true
 require 'rails_helper'
 
-RSpec.describe ApplicationController, type: :controller do
+describe ApplicationController do
   describe '#app_user' do
     context 'when current_user empty' do
       it 'returns User' do
@@ -23,8 +24,8 @@ RSpec.describe ApplicationController, type: :controller do
       end
 
       it 'calls current_user' do
-        expect(controller).to receive(:current_user).and_return(current_user)
         controller.app_user
+        expect(controller).to have_received(:current_user)
       end
 
       it 'returns current_user' do

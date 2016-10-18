@@ -1,5 +1,6 @@
+# frozen_string_literal: true
 Rails.application.routes.draw do
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  # mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
   devise_for :users
   # devise_for :users, path_names: { sign_in: 'login', sign_out: 'logout', registration: 'register', password: 'secret' }

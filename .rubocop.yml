@@ -1,7 +1,6 @@
 require: rubocop-rspec
 
 AllCops:
-  RunRailsCops: true
   Exclude:
     - bin/**/*
     - db/**/*
@@ -12,3 +11,9 @@ Documentation:
 
 Metrics/LineLength:
   Max: 150
+
+Rails:
+  Enabled: true
+
+RSpec/NestedGroups:
+  MaxNesting: 4

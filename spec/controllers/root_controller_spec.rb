@@ -1,6 +1,7 @@
+# frozen_string_literal: true
 require 'rails_helper'
 
-RSpec.describe RootController, type: :controller do
+describe RootController do
   describe 'GET #index' do
     it 'returns http success' do
       get :index

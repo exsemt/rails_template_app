@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module Controller
   module Users
     extend ActiveSupport::Concern
